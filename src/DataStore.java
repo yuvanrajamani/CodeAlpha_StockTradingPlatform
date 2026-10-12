@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/** Saves and loads a Portfolio to a plain-text file (file I/O persistence). */
 public class DataStore {
     private static final Path FILE = Paths.get("portfolio_data.txt");
 
