@@ -1,7 +1,5 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
-/** A record of a single buy or sell. */
 public class Transaction {
     public enum Type { BUY, SELL }
 
@@ -40,8 +38,6 @@ public class Transaction {
         return new Transaction(Type.valueOf(p[0]), p[1], Integer.parseInt(p[2]),
                 Double.parseDouble(p[3]), LocalDateTime.parse(p[4]));
     }
-
-    @Override
     public String toString() {
         return String.format("%s  %-4s %-6s x%-4d @ $%.2f  = $%.2f",
                 time.format(FMT), type, symbol, quantity, price, getTotal());
