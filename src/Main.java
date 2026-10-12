@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-/** Console entry point for the Stock Trading Platform. */
 public class Main {
     private static final Scanner scanner = new Scanner(System.in);
 
