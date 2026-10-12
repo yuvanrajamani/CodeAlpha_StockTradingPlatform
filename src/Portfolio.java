@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-/** A user's cash, holdings, transaction history and performance history. */
 public class Portfolio {
     private final String username;
     private double cash;
@@ -28,8 +26,6 @@ public class Portfolio {
     public List<Double> getValueHistory() { return valueHistory; }
 
     public void setCash(double cash) { this.cash = cash; }
-
-    /** Returns null on success, or an error message. */
     public String buy(Stock stock, int qty) {
         if (qty <= 0) return "Quantity must be positive.";
         double cost = stock.getPrice() * qty;
@@ -42,8 +38,6 @@ public class Portfolio {
         transactions.add(new Transaction(Transaction.Type.BUY, stock.getSymbol(), qty, stock.getPrice()));
         return null;
     }
-
-    /** Returns null on success, or an error message. */
     public String sell(Stock stock, int qty) {
         if (qty <= 0) return "Quantity must be positive.";
         int owned = holdings.getOrDefault(stock.getSymbol(), 0);
