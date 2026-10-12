@@ -1,4 +1,3 @@
-/** A tradable stock with a current price. */
 public class Stock {
     private final String symbol;
     private final String name;
