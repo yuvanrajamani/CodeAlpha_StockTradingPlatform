@@ -1,8 +1,6 @@
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
-
-/** Simulated stock market with randomly moving prices. */
 public class Market {
     private final Map<String, Stock> stocks = new LinkedHashMap<>();
     private final Random random = new Random();
@@ -27,8 +25,6 @@ public class Market {
     public Iterable<Stock> getAllStocks() {
         return stocks.values();
     }
-
-    /** Moves every stock's price by a random amount between -5% and +5%. */
     public void simulateDay() {
         for (Stock s : stocks.values()) {
             double changePct = (random.nextDouble() - 0.5) * 0.10;
